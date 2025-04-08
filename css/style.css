@@ -3,18 +3,18 @@
 
     --background-color: rgba(5, 13, 24, 0.555);
 
-    --fundo-menu-lateral: #57362b;
-    --fundo-claro: #a6afb4;
-    --fundo-escuro: #2f3538;
+    --fundo-menu-lateral: #1e4275;
+    --fundo-claro: #a6adb4;
+    --fundo-escuro: #0325568c;
 
-    --borda-clara: #b27059;
-    --borda-escura: #037F8C;
+    --borda-clara: #598bb2;
+    --borda-escura: #033c8c;
 
     --texto-escuro: #161616;
-    --texto-claro: #c8d4db;
-    --texto-branco: #ecf8ff;
+    --texto-claro: #e5feff;
+    --texto-branco: #eff4f7;
     --texto-hover: #218591;
-    --texto-opaco: #81888c;
+    --texto-opaco: #81848c;
 
     --cor-detalhes: #149ddd;
 
@@ -87,7 +87,7 @@ body {
     font-size: 18px;
     display: inline-block;
     background: white;
-    color: black;
+    color: rgb(86, 85, 85);
     margin-right: 5px;
     border-radius: 50%;
     width: 35px;
@@ -187,4 +187,14 @@ a {
 .nav-menu li:hover>a i {
     color: var(--cor-detalhes);
     font-weight: 600;
+}
+
+/* HERO */
+#hero {
+    width: 100%;
+    height: 100vh; /* view Port Height */
+    background: url("../img/bg-hero.png");
+    /* Criar img na I.A. */
+    background-size: cover;
+    position: relative;
 }
