@@ -40,6 +40,22 @@
         this.classList.toggle('bi-x')
     })
 
+    // Efeito Digitção
+    const typed = select('.typed')
+
+    if (typed) {
+        let typed_strings = typed.getAttribute('data-typed-items')
+        typed_strings = typed_strings.split(',')
+
+        new Typed('.typed', {
+            strings: typed_strings,
+            loop: true,
+            typeSpeed: 100, //velocidade digitação
+            backSpeed: 50, //velocidade em apagar
+            backDelay: 2000, //tempo de espera
+        });
+    }
+
     
 
 
