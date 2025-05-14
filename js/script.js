@@ -58,4 +58,35 @@
 
     new PureCounter();
 
+    /* Função Waypoints */
+    // JS para Skills = Habilidades ou Vendas
+
+    let skilsContent = select('.skills-content');
+    if (skilsContent) {  //verifica o elemento existe
+        new Waypoint({   //cria uma instancia
+            element: skilsContent,
+            offset: '80%',  //janela de visualização
+            handler: function(direction) {
+                let progress = select('.progress .progress-bar', true);
+                progress.forEach((el) => {
+                    el.style.width = el.getAttribute('aria-valuenow') + '%'
+                });
+            }
+        })  
+    }
+
+    // Isotope - Biblioteca para Filtro
+    window.addEventListener('load', () => {
+        let portfolioContainer = select(".portfolio-container");
+        if (portfolioContainer) {
+            let portfolioIsotope = new Isotope(portfolioContainer, {
+                itemsSelector: '.portfolio-item'
+            });
+
+            let portfolioFilters = select ('#portfolio-filters li', true);
+
+        }
+
+    });
+
 })()

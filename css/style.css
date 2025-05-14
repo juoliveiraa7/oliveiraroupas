@@ -1,20 +1,40 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* Estilos Fonts */
+/*
+
+Winky Rough: 
+    font-family: "Winky Rough", sans-serif;
+
+Poetsen One: 
+    font-family: "Poetsen One", sans-serif;
+
+Poppins: 
+    font-family: "Poppins", sans-serif;
+
+*/
+
+
+
+
 /* variavel para as cores  */
 :root {
 
     --background-color: rgba(5, 13, 24, 0.555);
 
-    --fundo-menu-lateral: #24272b;
-    --fundo-claro: #a6adb4;
-    --fundo-escuro: #0325568c;
+    --fundo-menu-lateral: #171616;
+    --fundo-claro: #a6afb4;
+    --fundo-escuro: #2f3538;
 
-    --borda-clara: #598bb2;
-    --borda-escura: #033c8c;
+    --borda-clara: #110e0d;
+    --borda-escura: #037F8C;
 
     --texto-escuro: #161616;
-    --texto-claro: #e5feff;
-    --texto-branco: #eff4f7;
+    --texto-claro: #c8d4db;
+    --texto-branco: #ecf8ff;
     --texto-hover: #218591;
-    --texto-opaco: #81848c;
+    --texto-opaco: #81888c;
 
     --cor-detalhes: #149ddd;
 
@@ -87,7 +107,7 @@ body {
     font-size: 18px;
     display: inline-block;
     background: white;
-    color: rgb(86, 85, 85);
+    color: black;
     margin-right: 5px;
     border-radius: 50%;
     width: 35px;
@@ -98,9 +118,6 @@ body {
 a {
     text-decoration: none;
 }
-
-
-
 
 /* Menu mobile */
 .mobile-nav-toggle {
@@ -131,11 +148,28 @@ a {
 }
 
 /* Ajuste para o Corpo do Conteudo */
+/* Estrutura Base - Corpo */
+#main {
+    margin-left: 300px;
+}
+
+.container {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
 
 /* menu responsivo */
 @media (max-width: 1199px) {
     #header {
         left: -300px;
+    }
+    #main {
+        margin-left: 0;
+    }
+    .container {
+        padding-left: 12px;
+        padding-right: 12px;
     }
 }
 
@@ -191,12 +225,12 @@ a {
 
 /* HERO */
 #hero {
-    width: 100%;
-    height: 100vh; /* view Port Height */
-    background: url("../img/bg-hero.png") top center;
-    /* Criar img na I.A. */
-    background-size: cover;
-    position: relative;
+   width: 100%;
+   height: 100vh; /* view Port Height */ 
+   background: url("../img/bg-hero.png") bottom;
+   /* Criar img na I.A. */
+   background-size: cover;
+   position: relative;
 }
 
 #hero::before {
@@ -229,14 +263,199 @@ a {
 }
 
 #hero p span {
-    color: #3b4449;
+    color: #110e0d;
     padding-bottom: 4px;
     letter-spacing: 2px;
-    border-bottom: 3px solid #3b4449;
+    border-bottom: 3px solid #111010;
 }
 
-/* Estrutura Base - Corpo */
-#main {
-    mar
+@media (min-width: 1024px) {
+    #hero {
+        background-attachment: fixed;
+    }
 }
+
+@media (max-width: 1024px) {
+    #hero {
+        background-attachment: fixed;
+    }
+}
+
+@media (max-width: 768px)  {
+    #hero h2 {
+        font-size: 75px;
+        line-height: 1;
+        margin-bottom: 20px;
+    }
+    #hero p {
+        font-size: 28px;
+    }
+}
+
+
+
+
+/* Seções e Titulos */
+section {
+    padding: 60px 0;
+    overflow: hidden;
+    /* clara */
+    /* background: var(--section-clara); */
+    background: #232121;
+    
+}
+
+.section-bg {
+    /* escura */
+    /* background: var(--section-escura); */
+    background: #000000;
+    color: var(--texto-claro);
+}
+
+/* Estrutura do Titulo Seção */
+.section-title {
+    padding-bottom: 30px;
+}
+
+/* titulo H2 */
+.section-title h2 {
+    color: #000000;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    font-family: "Poetsen One", sans-serif;
+}
+
+.section-title h2::after {
+    content: "";
+    position: absolute;
+    background: #000000;
+    width: 50px;
+    height: 3px;
+    display: block;
+    bottom: 0;
+    left: 0;
+}
+
+.section-title p {
+    margin-bottom: 0;
+}
+
+/* Sobre */
+.sobre .content h3 {
+    color: #000000;
+    font-weight: 700;
+    font-size: 26px;
+    font-family: "Winky Rough", sans-serif;
+}
+
+.sobre .content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sobre .content ul li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.sobre .content ul strong {
+    margin-right: 5px;
+    font-weight: 600;
+    /* letter-spacing: .5px; */
+    font-family: "Poppins", sans-serif;
+}
+
+.sobre .content ul i {
+    color: var(--fundo-menu-lateral);
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+/* Conquistas // Vendas */
+.conquistas {
+    padding-bottom: 30px;
+}
+
+.conquistas .count-box {
+    padding: 30px;
+    width: 100%;
+}
+
+.conquistas .count-box i {
+    color: #000000;
+    font-size: 44px;
+    display: block;
+    float: left;
+    line-height: 0; 
+}
+
+.conquistas .count-box span {
+    font-size: 48px;
+    color: #000000;
+    display: block;
+    line-height: 40px;
+    font-weight: 700;
+    margin-left: 60px;
+}
+
+.conquistas .count-box p {
+    padding: 15px 0 0 0;
+    margin: 0 0 0 60px;
+    color: #c8d4db;
+}
+
+.conquistas .count-box strong {
+    font-weight: 800;
+}
+
+.conquistas .count-box i:hover, .conquistas .count-box span:hover {
+    color: var(--fundo-claro);
+    transition: ease-in-out .5s;
+}
+
+/* Vendas // Skills = Habilidades */
+.skills .progress {
+    height: 60px;
+    display: block;
+    background: none;
+    border-radius: 0;
+}
+
+.skills .progress .skill {
+    padding: 0;
+    margin: 0 0 5px 0;
+    text-transform: uppercase;
+    display: block;
+    color: #c0c0c0;
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.skills .progress .skill .val {
+    font-style: normal;
+    float: right;
+    color: #c0c0c0;
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.skills .progress-bar-bg {
+    background: #a6afb4;
+    height: 10px;
+}
+
+.skills .progress-bar {
+    height: 30px;
+    background: #ffffff;
+    transition: 5s;
+    width: 1px;
+}
+
+
+
+
 
